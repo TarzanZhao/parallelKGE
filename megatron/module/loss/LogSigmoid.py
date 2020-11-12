@@ -4,9 +4,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from megatron.module import MegatronModule
+from .MegatronLossModule import MegatronLossModule
 
-class LogSigmoid(MegatronModule):
+class LogSigmoid(MegatronLossModule):
 
 	def __init__(self, model, adv_T = None):
 		super(LogSigmoid, self).__init__()

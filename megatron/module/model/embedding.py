@@ -5,9 +5,9 @@ import torch
 import megatron
 from megatron import get_args
 from megatron import mpu
-from ..module import MegatronModule
+from ..MegatronBaseModule import MegatronBaseModule
 
-class Embedding(MegatronModule):
+class Embedding(MegatronBaseModule):
     """Language model embeddings.
 
     Arguments:

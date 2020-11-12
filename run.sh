@@ -1,7 +1,8 @@
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 WORLD_SIZE=4
-MP_SIZE=1
+MP_SIZE=2
+
 CHECKPOINT_PATH="./checkpoints/transe_fb15k237"
 DATA_PATH="./benchmark/FB15K237/"
 
@@ -11,7 +12,7 @@ DISTRIBUTED_ARGS="--nproc_per_node $WORLD_SIZE \
                   --master_addr 127.0.0.1 \
                   --master_port 8889"
 
-KG_ARGS="--hidden-size 1024 \
+KG_ARGS="--hidden-size 200 \
         --entity_size 14541\
         --relation_size 237\
         --embedding_dropout_prob 0 "

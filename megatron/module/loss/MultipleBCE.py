@@ -4,9 +4,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from megatron.module import MegatronModule
+from .MegatronLossModule import MegatronLossModule
 
-class MultipleBCE(MegatronModule):
+class MultipleBCE(MegatronLossModule):
 
 	def __init__(self, model, smoothing = None, adv_T = None):
 		super(MultipleBCE, self).__init__(model)

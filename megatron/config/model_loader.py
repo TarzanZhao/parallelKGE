@@ -3,7 +3,7 @@ from torch.nn.parallel.distributed import DistributedDataParallel as torchDDP
 
 from megatron import get_args
 from megatron import mpu
-from megatron.model import DistributedDataParallel as LocalDDP
+from megatron.module.model import DistributedDataParallel as LocalDDP
 
 def get_model(model_provider_func):
     """Build the model."""

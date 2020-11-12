@@ -2,9 +2,9 @@ import torch
 # from apex.optimizers import FusedAdam as Adam
 from torch.optim import Adam,SGD
 from megatron import get_args
-from megatron.model import get_params_for_weight_decay_optimization
+from megatron.module.model import get_params_for_weight_decay_optimization
 from torch.nn.parallel.distributed import DistributedDataParallel as torchDDP
-from megatron.model import DistributedDataParallel as LocalDDP
+from megatron.module.model import DistributedDataParallel as LocalDDP
 
 def get_optimizer(model):
     """Set up the optimizer."""

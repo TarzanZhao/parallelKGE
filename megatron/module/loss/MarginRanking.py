@@ -4,9 +4,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from megatron.module import MegatronModule
+from .MegatronLossModule import MegatronLossModule
 
-class MarginRanking(MegatronModule):
+class MarginRanking(MegatronLossModule):
 
 	def __init__(self, model, margin, adv_T = None):
 		super(MarginRanking, self).__init__(model)

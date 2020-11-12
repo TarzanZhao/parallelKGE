@@ -20,10 +20,10 @@ from torch.nn.modules import Module
 from torch.autograd import Variable
 
 from megatron import mpu
-from megatron.module import MegatronModule
+from ..MegatronBaseModule import MegatronBaseModule
 
 
-class DistributedDataParallel(MegatronModule):
+class DistributedDataParallel(MegatronBaseModule):
 
     def __init__(self, module):
         super(DistributedDataParallel, self).__init__()
